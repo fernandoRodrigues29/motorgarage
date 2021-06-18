@@ -6,41 +6,64 @@
     <title>self-employer website portifloio</title>
      <link rel="stylesheet" href="./css/style.css"> 
      <link rel="stylesheet" href="./vendor/css/font-awesome.min.css">
+     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
     <main>
-        <header>
-            
+        <header id="principal">
+            <!--
+                melhorar o responsivo da pagina
+                *menu responsivo, grande ul , pequeno metadde da pagina
+                melhorar os botõe 
+                icones melhores
+                efeitos ok
+                melhorar as posições, e preencher mais o  do rodapé
+                ~smoth scroll no menu,fazer a tela pecorrer a pagina até o local
+            -->
          <nav>
                     <div id="titulo-nav"><img src="img/icone-topo.png" alt="car garage">  <span>MotorGarage</span>  </div>  
-                    <div id="telefone-nav"> <a href="#">Ligue agora (99) 99999-9999</a> </div>  
+                    <ul class="menu">
+                        <li><a href="#principal">Principal</a></li>
+                        <li><a href="#servicos">Serviços</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#testemunhos">Testemunhos</a></li>
+                    </ul>
+                    <div class="menu-mobil"></div>
+                    <div class="menu-mobil-list">
+                        <ul>
+                            <li><a href="#principal">Principal</a></li>
+                            <li><a href="#servicos">Serviços</a></li>
+                            <li><a href="#sobre">Sobre</a></li>
+                            <li><a href="#testemunhos">Testemunhos</a></li>
+                        </ul>   
+                    </div>  
          </nav>
-         <div class=" row2 centralizar-texto">
-            <div class="col2-5 texto-em-branco-head ">
-                    <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non consequat velit. Praesent hendrerit mattis eros id scelerisque.
+         <div class=" row2 centralizar-texto centralizar">
+            <div class="col2-5 texto-em-branco-head texto-grosso">
+                    <h2 class="titulo-principal">Motor Garagem</h2>    
+                    <p>
+                        A melhor oficina de manutenção de motos do Distrito Federal.
+                    </p>
+                   <p>
+                        Lique para gente : 
                    </p>
-               </div>
-            <div class="col2-3 mt-3 formilario-head-margem mr-1">
-                <div id="encunciado-head">
-                        <h3>O que posso te ajuda?</h3> 
-                </div>
-                <form action="" class="pd-2">
-                    <input type="text" value placeholder="assunto">
-                    <textarea class="text-area" name="mensagem" id="" cols="30" rows="10"></textarea>
-                    <button class="btn btn-info">enviar</button>
-                </form>
-             </div>
+                   <p>
+                    <span>(61)77677-6827</span>
+                   </p>
 
+            </div>
+            <!-- deletera esse bloco -->
          </div>   
         </header>
-        <section  class="conteiner_principais_servicos">
+        <div class="cover"></div>
+        <section  class="conteiner_principais_servicos" id="servicos">
             <div class="row2 centralizar">
                 <div class="col2-2">
                     <h3 class="centralizar-texto mb-2 titulo-destaque" >Meus Serviços</h3>
                 </div>
             </div>
-            <div class="row2 centralizar">
-                <div class="col2-2 card-centralizar">
+            <div class="row2 centralizar cards">
+                <div class="col2-2 card-centralizar" data-aos="flip-left">
                     <img src="./img/s_01.jpg" alt="">
                     <h4>
                         <strong>
@@ -48,9 +71,10 @@
                         </strong>
                     </h4>
                     <p> Donec sit amet interdum tortor, non porta sapien. Duis et orci in leo facilisis vestibulum. Nam vehicula mollis arcu, non ultrices nisi pellentesque nec.  </p>
-                    <button class="btn btn-primary mt-1">Orçarmento</button>
+                    <button class="btn btn-primary mt-1">Oramento</button>
                 </div>
-                <div class="col2-2 card-centralizar">
+
+                <div class="col2-2 card-centralizar" data-aos="flip-down">
                     <img src="./img/s_02.jpg" alt="">
                     <h4>
                         <strong>
@@ -58,9 +82,10 @@
                         </strong>
                     </h4>
                     <p> Donec sit amet interdum tortor, non porta sapien. Duis et orci in leo facilisis vestibulum. Nam vehicula mollis arcu, non ultrices nisi pellentesque nec.</p>
-                    <button class="btn btn-primary mt-1">Orçarmento</button>
+                    <button class="btn btn-primary mt-1">Orçamento</button>
                 </div>
-                <div class="col2-2 card-centralizar">
+
+                <div class="col2-2 card-centralizar" data-aos="flip-right">
                     <img src="./img/s_03.jpg" alt="">
                     <h4>
                         <strong>
@@ -68,11 +93,11 @@
                         </strong>
                     </h4>
                     <p> Donec sit amet interdum tortor, non porta sapien. Duis et orci in leo facilisis vestibulum. Nam vehicula mollis arcu, non ultrices nisi pellentesque nec. </p>
-                    <button class="btn btn-primary mt-1">Orçarmento</button>
+                    <button class="btn btn-primary mt-1">Orçamento</button>
                 </div>
             </div>
         </section>
-        <section class="conteiner-quem-e-voce">
+        <section class="conteiner-quem-e-voce" id="sobre">
             <div class="row2 centralizar">
                 <h1 id="titulo-quem-sou">Quen Sou</h1>
             </div>
@@ -88,32 +113,81 @@
                 </div>
             </div>
         </section>
-        <section class="conteiner-testemunhos">
+        <section class="conteiner-testemunhos" id="testemunhos">
             <div class="row2 centralizar ">
-                <div class="col2-3 centralizar-texto">
+                <div class="col2-3 centralizar-texto" >
                     <h2 class="titulo-destaque">Testemunhos</h2>
                 </div>
             </div>
-            <div class="row2 centralizar mt-1 pd-2">
-                <div class="col2-2 centralizar-texto pd-3">
+            <div class="row2 posicionamento-cards-evenly mt-1 pd-2">
+
+                <div class="col2-2 centralizar-texto pd-3 card-testemunho" data-aos="slide-right">
                     <img class="img-testemunho" src="./img/t_00.jpg" alt="">
-                    <p> <span class="aspas">&ldquo;</span> In hac habitasse platea dictumst. Quisque bibendum luctus justo, id luctus dolor dapibus sed. Integer vel arcu mauris.  <span class="aspas">&rdquo;</span> </p>
+                    <p> 
+                        <span class="aspas">&ldquo;</span> 
+                        In hac habitasse platea dictumst. Quisque bibendum luctus justo, id luctus dolor dapibus sed.  
+                        <span class="aspas">&rdquo;</span> 
+                    </p>
+                    <p class="assinatura-testemunha">
+                        Artur - Motorista
+                    </p>
                 </div>
-                <div class="col2-2 centralizar-texto pd-3">
-                    <img  class="img-testemunho" src="./img/t_01.jpg" alt="">
-                    <p>  <span class="aspas">&ldquo;</span>In hac habitasse platea dictumst. Quisque bibendum luctus justo, id luctus dolor dapibus sed. Integer vel arcu mauris. <span class="aspas">&rdquo;</span></p>
+                <div class="col2-2 centralizar-texto pd-3 card-testemunho" data-aos="slide-up">
+                    <img  class="img-testemunho" src="./img/t_01.jpg" alt="" >
+                    <p> 
+                        <span class="aspas">&ldquo;</span> 
+                        In hac habitasse platea dictumst. Quisque bibendum luctus justo, id luctus dolor dapibus sed.  
+                        <span class="aspas">&rdquo;</span> 
+                    </p>
+                    <p class="assinatura-testemunha">
+                        Pedro - Frentista
+                    </p>
                 </div>
-                <div class="col2-2 centralizar-texto pd-3">
+                <div class="col2-2 centralizar-texto pd-3 card-testemunho" data-aos="slide-left">
                     <img class="img-testemunho" src="./img/t_03.jpg" alt="">
-                    <p>  <span class="aspas">&ldquo;</span> In hac habitasse platea dictumst. Quisque bibendum luctus justo, id luctus dolor dapibus sed. Integer vel arcu mauris. <span class="aspas">&rdquo;</span></p>
+                    <p> 
+                        <span class="aspas">&ldquo;</span> 
+                        In hac habitasse platea dictumst. Quisque bibendum luctus justo, id luctus dolor dapibus sed.  
+                        <span class="aspas">&rdquo;</span> 
+                    </p>
+                    <p class="assinatura-testemunha">
+                        Marcela - Engenheira
+                    </p>
                 </div>
             </div>
         </section>
-
-        <section  class="conteiner-rodape">
-                <div class="row2 centralizar">
+        <section  class="conteiner-rodape" id="rodape">
+                <div class="row2 coluna-rodape">
+                    <div class="titulo-rodape">
+                       <img src="img/icone-topo.png" alt="car garage">
+                        <span>MotorGarage</span>   
+                    </div>
+                    <div class="lista-icone-sociais">
+                        <a href=""><img src="./img/i_02.png" alt=""> </a>
+                        <a href=""><img src="./img/i_04.png" alt=""></a>
+                        <a href=""><img src="./img/i_05.png" alt=""></a>
+                        <a href=""><img src="./img/i_07.png" alt=""></a>
+                    </div>
+                    <div class="lista-secoes">
+                        <ul>
+                            <li><a href="#principal">Principal </a></li>
+                            <li><a href="#servicos">Serviços </a></li>
+                            <li><a href="#sobre">Sobre </a></li>
+                            <li><a href="#testemunhos">Testemunhos </a></li>
+                           
+                        </ul>
+                    </div>
+                    <div class="lista-endereco">
+                        <ul>
+                            <li><a href="#"> Avenida das jabuticabeiras , nº 457 sobreloja 345, cidade modelo -UF </a></li>
+                            <li><a href="#">contado@motorgaragem.com </a></li>
+                            <li><a href="#">(77) 986483-7853 </a></li>
+                            
+                        </ul>
+                    </div>
                     
-                    <div class="col2-2">
+                    
+                    <!-- <div class="col2-2">
                         <ul class="lista topo-lista ">
                             <li><i class="fa fa-home fa-2x" aria-hidden="true"></i> Rua cidade Estado</li>
                             <li><i class="fa fa-envelope-o fa-2x" aria-hidden="true"></i> email@email.com</li>
@@ -121,7 +195,7 @@
                         </ul>
                     </div>
                     <!--trocar por icone-->
-                    <div class="col2-3"> 
+                    <!--<div class="col2-3"> 
                         <div class="lista topo-lista lista-rodape centralizar-texto ">
                             <a href=""><i class="fa fa-facebook " aria-hidden="true"></i></a>
                             <a href=""><i class="fa fa-twitter " aria-hidden="true"></i></a>
@@ -135,16 +209,26 @@
                             <li>Quem sou</li>
                             <li>Testemunhos</li>    
                         </ul>
-                    </div>
+                    </div> -->
                 </div>
         </section>
         <footer class="conteiner-fundo">
             <div class="row2 centralizar">
                 <div class="col2-2">
-                    <p> power by GO-H0RS3 STUD10 &#x1F40E</p>
+                    <p> power by <a href="#" class="link-propaganda-rodape">MataBug</a> &#128027;</p>
                 </div>
             </div>
         </footer>
     </main>
+    <script type="text/javascript">
+        window.addEventListener('scroll',function(){
+            const header = document.querySelector('nav');
+            header.classList.toggle("sticky",window.scrollY > 0);
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
 </html>
