@@ -99,6 +99,12 @@ nav .menu-mobil
     width: 50px;
     height: 50px;
     display: none;
+    filter: invert(1);
+}
+
+nav .menu-mobil-stick
+{
+    filter: invert(0) !important;    
 }
 
 #encunciado-head{
@@ -167,15 +173,19 @@ nav #telefone-nav{
 
 .menu-mobil-list
 {
-    visibility: hidden;
+    visibility: visible;
     margin: 0;
     background: #fff;
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    /* width: 67%; */
+    width: 0%;
     height: 100vh;
+    overflow-x: hidden;
+    transition: .5s;
 }
+
 
 .menu-mobil-list ul
 {
@@ -186,11 +196,24 @@ nav #telefone-nav{
     margin-top: 10vh;
    
 }
+.menu-mobil-list ul li
+{
+    padding: 10vw 27vw;
+   
+}
+
+.menu-mobil-list ul li:hover
+{
+    border-bottom: 1px solid #ccc;
+}
 
 .menu-mobil-list ul li a
 {
-border: 1px solid red;
-text-decoration: none;
+    border: 0px solid red;
+    color: #137283 ;
+    text-decoration: none;
+    font-size: 1.8em;
+    font-family: sans-serif;
 }
 
 

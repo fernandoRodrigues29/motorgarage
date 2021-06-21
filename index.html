@@ -12,12 +12,7 @@
     <main>
         <header id="principal">
             <!--
-                melhorar o responsivo da pagina
-                *menu responsivo, grande ul , pequeno metadde da pagina
-                melhorar os botõe 
-                icones melhores
-                efeitos ok
-                melhorar as posições, e preencher mais o  do rodapé
+             melhorar omenu responsivo,tempo efeito, o j tambem
                 ~smoth scroll no menu,fazer a tela pecorrer a pagina até o local
             -->
          <nav>
@@ -28,13 +23,13 @@
                         <li><a href="#sobre">Sobre</a></li>
                         <li><a href="#testemunhos">Testemunhos</a></li>
                     </ul>
-                    <div class="menu-mobil"></div>
+                    <div class="menu-mobil" id="menu-mobil-id"></div>
                     <div class="menu-mobil-list">
                         <ul>
-                            <li><a href="#principal">Principal</a></li>
-                            <li><a href="#servicos">Serviços</a></li>
-                            <li><a href="#sobre">Sobre</a></li>
-                            <li><a href="#testemunhos">Testemunhos</a></li>
+                            <li><a href="#principal" class="m_menu_item">Principal</a></li>
+                            <li><a href="#servicos"  class="m_menu_item">Serviços</a></li>
+                            <li><a href="#sobre" class="m_menu_item">Sobre</a></li>
+                            <li><a href="#testemunhos" class="m_menu_item">Testemunhos</a></li>
                         </ul>   
                     </div>  
          </nav>
@@ -223,8 +218,32 @@
     <script type="text/javascript">
         window.addEventListener('scroll',function(){
             const header = document.querySelector('nav');
+            const menuM = document.querySelector('.menu-mobil');
             header.classList.toggle("sticky",window.scrollY > 0);
+            menuM.classList.toggle("menu-mobil-stick",window.scrollY > 0);
         });
+        
+        const menu_mobile = document.querySelector('#menu-mobil-id');
+        menu_mobile.addEventListener('click',function(){
+
+            const menu_expansivo = document.querySelectorAll('.menu-mobil-list');
+            console.log('o menu e', menu_expansivo);
+            
+            if(menu_expansivo[0].style.width === "67%"){
+                menu_expansivo[0].style.width="0%";
+            }else{
+                menu_expansivo[0].style.width="67%";
+            }
+        });
+
+        const menu_mobile_a = document.querySelectorAll('.m_menu_item');
+           for (let index = 0; index < menu_mobile_a.length; index++) {
+  
+                menu_mobile_a[index].addEventListener('click',function(){
+                    const menu_expansivo = document.querySelectorAll('.menu-mobil-list');
+                        menu_expansivo[0].style.width="0%";
+                });
+           } 
     </script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
